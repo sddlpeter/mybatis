@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.powernode.mybatis.mapper.CarMapper">
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+
+    <insert id="insertAccount">
+        insert into account values (2, 'jack');
+    </insert>
+
+    <select id="selectById" resultType="com.powernode.mybatis.pojo.Car">
+        select id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType
+        from t_car
+        where id = #{id};
+    </select>
+
+    <select id="selectById2" resultType="com.powernode.mybatis.pojo.Car">
+        select id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType
+        from t_car
+        where id = #{id};
+    </select>
+
+    <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+        select id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType
+        from t_car
+    </select>
+
+    <select id="selectById3" resultType="Map">
+        select id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType
+        from t_car
+        where id = #{id};
+    </select>
+
+    <select id="selectAll2" resultType="map">
+        select id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType
+        from t_car
+    </select>
+
+    <select id="selectAll3" resultType="map">
+        select id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType
+        from t_car
+    </select>
+
+    <resultMap id="carResultMap" type="com.powernode.mybatis.pojo.Car">
+        <id property="id" column="id"/>
+        <result property="carNum" column="car_num"/>
+        <result property="brand" column="brand" javaType="string" jdbcType="VARCHAR"/>
+        <result property="guidePrice" column="guide_price"/>
+        <result property="produceTime" column="produce_time"/>
+        <result property="carType" column="car_type"/>
+    </resultMap>
+
+    <select id="selectAllByResultMap" resultMap="carResultMap">
+        select *
+        from t_car
+    </select>
+
+    <select id="selectAllByMapUnderscoreToCamelCase" resultType="com.powernode.mybatis.pojo.Car">
+        select * from t_car;
+    </select>
+
+    <select id="selectTotal" resultType="long">
+        select count(1) as total from t_car;
+    </select>
+</mapper>

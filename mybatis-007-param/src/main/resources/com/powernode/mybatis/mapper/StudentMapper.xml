@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.powernode.mybatis.mapper.StudentMapper">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into student values (null, #{name}, #{age}, #{height}, #{gender}, #{birthDate});
+    </insert>
+
+    <select id="selectByName" resultType="com.powernode.mybatis.pojo.Student" parameterType="java.lang.String">
+        select * from student where name = #{name, javaType=String, jdbcType=VARCHAR};
+    </select>
+
+    <select id="selectByDateBirth" resultType="com.powernode.mybatis.pojo.Student">
+        select id, name, age, height, gender, birth_date as birthDate from student where birth_date = #{birthDate};
+    </select>
+
+    <select id="selectByGender" resultType="com.powernode.mybatis.pojo.Student">
+        select id, name, age, height, gender, birth_date as birthDate
+        from student
+        where gender = #{gender};
+    </select>
+
+    <select id="selectByParamMap" resultType="com.powernode.mybatis.pojo.Student">
+        select id, name, age, height, gender, birth_date as birthDate
+        from student
+        where name = #{name}
+        and age  = #{age};
+    </select>
+
+    <select id="selectByNameAndSex" resultType="com.powernode.mybatis.pojo.Student">
+        select id, name, age, height, gender, birth_date as birthDate
+        from student
+        where name = #{name}
+        and gender  = #{age};
+    </select>
+</mapper>

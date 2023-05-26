@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/mybatis-001-introduction/pom.xml" />
+        <option value="$PROJECT_DIR$/junit/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-002-crud/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-003-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/parse-xml-by-dom4j/pom.xml" />
+        <option value="$PROJECT_DIR$/goodbatis/pom.xml" />
+        <option value="$PROJECT_DIR$/test-ibatis/pom.xml" />
+        <option value="$PROJECT_DIR$/ibatis/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-004-web/pom.xml" />
+        <option value="$PROJECT_DIR$/javassist-001/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-005-web/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-006-tips/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-007-param/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-008-select/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-009-dynamic-sql/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-009-advanced-mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-010-advanced-mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-011-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-012-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-013-page/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
